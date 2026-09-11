@@ -96,7 +96,7 @@ const currentYear = new Date().getFullYear()
           </li>
           <li>
             <a
-              href="https://github.com"
+              href="https://github.com/Vincent0-8/NexTidy-Vue-landing-page"
               target="_blank"
               rel="noopener noreferrer"
               class="flex h-9 w-9 items-center justify-center rounded-lg text-slate-400 transition hover:bg-slate-900 hover:text-white"
