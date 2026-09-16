@@ -10,77 +10,79 @@ const currentYear = new Date().getFullYear()
 <template>
   <footer class="bg-slate-950 border-t border-slate-900 text-slate-400">
     <div class="mx-auto max-w-6xl px-4 sm:px-6">
-      <div class="grid gap-8 py-12 sm:grid-cols-12 md:py-16">
-        <div class="sm:col-span-12 lg:col-span-4 lg:max-w-xs space-y-3">
+      <div class="flex flex-col gap-10 py-12 md:py-16 lg:flex-row lg:justify-between lg:items-start">
+        <div class="space-y-3 lg:max-w-xs">
           <AppLogo size="md" />
           <p class="text-sm text-slate-400 leading-relaxed">
             The smarter, modular foundation to deliver modern high-performance web experiences.
           </p>
         </div>
 
-        <div class="sm:col-span-4 md:col-span-3 lg:col-span-2 sm:col-start-7 lg:col-start-6">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
-            Navigation
-          </h4>
-          <ul class="space-y-2.5 text-sm font-medium text-slate-400">
-            <li>
-              <a href="#features" class="transition hover:text-white">Features</a>
-            </li>
-            <li>
-              <a href="#workflow" class="transition hover:text-white">Workflow</a>
-            </li>
-            <li>
-              <a href="#showcase" class="transition hover:text-white">Showcase</a>
-            </li>
-            <li>
-              <a href="#stats" class="transition hover:text-white">Impact</a>
-            </li>
-          </ul>
-        </div>
+        <div class="grid grid-cols-2 gap-8 sm:grid-cols-3 sm:gap-10 lg:gap-14">
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Navigation
+            </h4>
+            <ul class="space-y-2.5 text-sm font-medium text-slate-400">
+              <li>
+                <a href="#features" class="transition hover:text-white">Features</a>
+              </li>
+              <li>
+                <a href="#workflow" class="transition hover:text-white">Workflow</a>
+              </li>
+              <li>
+                <a href="#showcase" class="transition hover:text-white">Showcase</a>
+              </li>
+              <li>
+                <a href="#stats" class="transition hover:text-white">Impact</a>
+              </li>
+            </ul>
+          </div>
 
-        <div class="sm:col-span-4 md:col-span-3 lg:col-span-2">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
-            Resources
-          </h4>
-          <ul class="space-y-2.5 text-sm font-medium text-slate-400">
-            <li>
-              <a href="#articles" class="transition hover:text-white">Platform Specs</a>
-            </li>
-            <li>
-              <a href="#subscribe" class="transition hover:text-white">Early Access</a>
-            </li>
-            <li>
-              <button
-                type="button"
-                @click="emit('open-demo')"
-                class="text-left transition hover:text-white cursor-pointer"
-              >
-                Request Walkthrough
-              </button>
-            </li>
-          </ul>
-        </div>
+          <div>
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Resources
+            </h4>
+            <ul class="space-y-2.5 text-sm font-medium text-slate-400">
+              <li>
+                <a href="#articles" class="transition hover:text-white">Platform Specs</a>
+              </li>
+              <li>
+                <a href="#subscribe" class="transition hover:text-white">Early Access</a>
+              </li>
+              <li>
+                <button
+                  type="button"
+                  @click="emit('open-demo')"
+                  class="text-left transition hover:text-white cursor-pointer"
+                >
+                  Request Walkthrough
+                </button>
+              </li>
+            </ul>
+          </div>
 
-        <div class="sm:col-span-4 md:col-span-3 lg:col-span-3">
-          <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
-            Quick Action
-          </h4>
-          <p class="text-xs text-slate-400 mb-3 leading-relaxed">
-            Interested in deploying this architecture for your product team?
-          </p>
-          <button
-            type="button"
-            @click="emit('open-demo')"
-            class="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900 px-3.5 py-2 text-xs font-semibold text-slate-200 shadow-sm transition hover:bg-slate-800 hover:text-white hover:border-slate-600 cursor-pointer"
-          >
-            <span>Book a Product Demo</span>
-            <span>&rarr;</span>
-          </button>
+          <div class="col-span-2 sm:col-span-1 max-w-xs">
+            <h4 class="text-xs font-bold text-white uppercase tracking-wider mb-4">
+              Quick Action
+            </h4>
+            <p class="text-xs text-slate-400 mb-3 leading-relaxed">
+              Interested in deploying this architecture for your product team?
+            </p>
+            <button
+              type="button"
+              @click="emit('open-demo')"
+              class="inline-flex items-center gap-1.5 rounded-lg border border-slate-700 bg-slate-900 px-3.5 py-2 text-xs font-semibold text-slate-200 shadow-sm transition hover:bg-slate-800 hover:text-white hover:border-slate-600 cursor-pointer"
+            >
+              <span>Book a Product Demo</span>
+              <span>&rarr;</span>
+            </button>
+          </div>
         </div>
       </div>
 
-      <div class="border-t border-slate-900 py-6 md:flex md:items-center md:justify-between">
-        <ul class="flex items-center gap-3 md:order-2 mb-4 md:mb-0">
+      <div class="border-t border-slate-900 py-6 flex flex-col items-center gap-4 sm:flex-row sm:justify-between">
+        <ul class="flex items-center gap-3 sm:order-2">
           <li>
             <a
               href="https://x.com"
@@ -109,7 +111,7 @@ const currentYear = new Date().getFullYear()
           </li>
         </ul>
 
-        <p class="text-xs text-slate-500">
+        <p class="text-xs text-slate-500 text-center sm:text-left">
           &copy; {{ currentYear }} NexTidy. All rights reserved.
         </p>
       </div>

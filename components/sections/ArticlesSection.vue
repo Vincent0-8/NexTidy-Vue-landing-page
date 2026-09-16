@@ -39,7 +39,7 @@ const articles = [
         </p>
       </div>
 
-      <div class="mx-auto grid max-w-sm gap-8 sm:max-w-none sm:grid-cols-2 lg:grid-cols-3">
+      <div class="mx-auto grid max-w-sm gap-8 sm:max-w-none sm:grid-cols-1 lg:grid-cols-3">
         <article
           v-for="(item, index) in articles"
           :key="item.id"
